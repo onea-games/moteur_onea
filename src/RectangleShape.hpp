@@ -37,7 +37,12 @@ namespace onea
 
         bool intersect(RectangleShape<T> &shape) const
         {
-            return  contains( shape.m_position ); // A FINIR CAR J'AI LA FLEMME
+            Vector2<T> position(shape.m_position);
+
+            return  contains(position) ||
+                    contains(position.x + shape.m_taille.x, position.y) ||
+                    contains(position.x + shape.m_taille.x, position.y + shape.m_taille.y) ||
+                    contains(position.x, position.y + shape.m_taille.y);
         }
 
         bool operator==( const RectangleShape &shape ) const
