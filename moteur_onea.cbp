@@ -49,6 +49,8 @@
 		<Unit filename="src/Carte/MapLoader.hpp" />
 		<Unit filename="src/Carte/TextureLoader.cpp" />
 		<Unit filename="src/Carte/TextureLoader.hpp" />
+		<Unit filename="src/Carte/Tile.cpp" />
+		<Unit filename="src/Carte/Tile.hpp" />
 		<Unit filename="src/CylindreEau.cpp" />
 		<Unit filename="src/CylindreEau.hpp" />
 		<Unit filename="src/Entite.cpp" />

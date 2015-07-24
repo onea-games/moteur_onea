@@ -8,6 +8,7 @@
 #include "src/LumiereDirectionelle.hpp"
 #include "src/CylindreEau.hpp"
 #include "src/Carte/MapLoader.hpp"
+#include "src/Carte/Tile.hpp"
 
 #define VITESSE 5
 
@@ -19,6 +20,12 @@ int main()
     onea::carte::MapLoader map( "test.xml" );
 
     map.load();
+
+    sf::Texture texture;
+
+    texture.loadFromFile("cb.bmp");
+
+    onea::carte::Tile tile( &texture, (sf::Vector2f)texture.getSize(), sf::Vector2f(0, 0), (sf::Vector2f)texture.getSize() );
 
 	// Start the game loop
     while (app.isOpen())
@@ -41,6 +48,9 @@ int main()
 
         // Clear screen
         app.clear();
+
+        app.draw(tile);
+
         // Update the window
         app.display();
     }

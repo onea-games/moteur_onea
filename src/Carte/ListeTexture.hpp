@@ -28,7 +28,7 @@ namespace onea
             size_t getTaille() const;
 
         protected:
-            set<TextureLoader> m_texture;
+            set< TextureLoader > m_texture;
         };
 
     }
