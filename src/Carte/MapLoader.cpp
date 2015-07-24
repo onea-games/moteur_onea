@@ -5,8 +5,6 @@ onea::carte::MapLoader::MapLoader(string nomFichier)
       m_textures(),
       m_lecture(false)
 {
-    cout << nomFichier << endl;
-
     if( !m_document.LoadFile() ){
         cerr << "Impossible de lire le document" << endl;
         cerr << "error #" << m_document.ErrorId() << " : " << m_document.ErrorDesc() << endl;
@@ -16,13 +14,8 @@ onea::carte::MapLoader::MapLoader(string nomFichier)
 
 void onea::carte::MapLoader::load()
 {
-    if( m_lecture ){
-
+    if( m_lecture )
         loadTexture();
-
-        cout << "Bien ! : " << m_textures.getTaille() << endl;
-
-    }
 }
 
 bool onea::carte::MapLoader::verifDocument()
