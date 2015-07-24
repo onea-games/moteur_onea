@@ -1,3 +1,7 @@
 # moteur_onea
 
-Réalisé par __Alexis Coutin__ alias _Le programmateur_.
+Réalisé par __Alexis Courtin__ alias Le programmeur en charge du projet.
+
+## Installation
+
+Démerdez-vous :D
