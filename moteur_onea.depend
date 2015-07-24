@@ -1,0 +1,101 @@
+# depslib dependency file v1.0
+1437745682 source:/home/alexis/Programmations/cpp/moteur_onea/main.cpp
+	<SFML/Graphics.hpp>
+	<iostream>
+	"src/Entite.hpp"
+	"src/LigneShape.hpp"
+	"src/Lumiere.hpp"
+	"src/LumiereDirectionelle.hpp"
+	"src/CylindreEau.hpp"
+	"src/Carte/MapLoader.hpp"
+
+1437177471 source:/home/alexis/Programmations/cpp/moteur_onea/src/LigneShape.cpp
+
+1437177458 /home/alexis/Programmations/cpp/moteur_onea/src/LigneShape.hpp
+	<SFML/Graphics.hpp>
+
+1437141785 source:/home/alexis/Programmations/cpp/moteur_onea/src/Shape.cpp
+
+1437150532 source:/home/alexis/Programmations/cpp/moteur_onea/src/RectangleShape.cpp
+
+1437211426 /home/alexis/Programmations/cpp/moteur_onea/src/RectangleShape.hpp
+	"Shape.hpp"
+
+1437181466 /home/alexis/Programmations/cpp/moteur_onea/src/Shape.hpp
+	<SFML/Graphics/Drawable.hpp>
+	<vector>
+	"LigneShape.hpp"
+
+1437182427 source:/home/alexis/Programmations/cpp/moteur_onea/src/Entite.cpp
+	"Entite.hpp"
+
+1437182324 /home/alexis/Programmations/cpp/moteur_onea/src/Entite.hpp
+	<SFML/Graphics.hpp>
+	"RectangleShape.hpp"
+
+1437253027 source:/home/alexis/Programmations/cpp/moteur_onea/src/Lumiere.cpp
+	"Lumiere.hpp"
+
+1437252997 /home/alexis/Programmations/cpp/moteur_onea/src/Lumiere.hpp
+	<SFML/Graphics.hpp>
+	<vector>
+	<iostream>
+	"Triangle.hpp"
+	"LigneShape.hpp"
+	<cmath>
+
+1437184506 /home/alexis/Programmations/cpp/moteur_onea/src/Triangle.hpp
+	<SFML/Graphics.hpp>
+
+1437184725 source:/home/alexis/Programmations/cpp/moteur_onea/src/Triangle.cpp
+	"Triangle.hpp"
+
+1437263417 source:/home/alexis/Programmations/cpp/moteur_onea/src/LumiereDirectionelle.cpp
+	"LumiereDirectionelle.hpp"
+
+1437263377 /home/alexis/Programmations/cpp/moteur_onea/src/LumiereDirectionelle.hpp
+	<SFML/Graphics.hpp>
+	<vector>
+	<cmath>
+	"Lumiere.hpp"
+
+1437608538 source:/home/alexis/Programmations/cpp/moteur_onea/src/CylindreEau.cpp
+	"CylindreEau.hpp"
+
+1437575207 /home/alexis/Programmations/cpp/moteur_onea/src/CylindreEau.hpp
+	<SFML/Graphics.hpp>
+	<iostream>
+
+1437655682 source:/home/alexis/Programmations/cpp/moteur_onea/src/TextureLoader.cpp
+	"TextureLoader.hpp"
+
+1437655658 /home/alexis/Programmations/cpp/moteur_onea/src/TextureLoader.hpp
+	<SFML/Graphics.hpp>
+	<string>
+
+1437745907 source:/home/alexis/Programmations/cpp/moteur_onea/src/Carte/MapLoader.cpp
+	"MapLoader.hpp"
+
+1437655682 source:/home/alexis/Programmations/cpp/moteur_onea/src/Carte/TextureLoader.cpp
+	"TextureLoader.hpp"
+
+1437659210 /home/alexis/Programmations/cpp/moteur_onea/src/Carte/TextureLoader.hpp
+	<SFML/Graphics.hpp>
+	<string>
+
+1437745599 source:/home/alexis/Programmations/cpp/moteur_onea/src/Carte/ListeTexture.cpp
+	"ListeTexture.hpp"
+
+1437745462 /home/alexis/Programmations/cpp/moteur_onea/src/Carte/ListeTexture.hpp
+	<set>
+	<string>
+	<SFML/Graphics/Texture.hpp>
+	"TextureLoader.hpp"
+
+1437745367 /home/alexis/Programmations/cpp/moteur_onea/src/Carte/MapLoader.hpp
+	<SFML/Graphics/Texture.hpp>
+	<tinyxml.h>
+	<iostream>
+	<string>
+	"ListeTexture.hpp"
+
