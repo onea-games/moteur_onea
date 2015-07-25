@@ -10,6 +10,8 @@
 #include "src/Carte/MapLoader.hpp"
 #include "src/Carte/Tile.hpp"
 
+#include "src/Carte/TileLoader.hpp"
+
 #define VITESSE 5
 
 int main()

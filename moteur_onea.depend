@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1437771468 source:/home/alexis/Programmations/cpp/moteur_onea/main.cpp
+1437784691 source:/home/alexis/Programmations/cpp/moteur_onea/main.cpp
 	<SFML/Graphics.hpp>
 	<iostream>
 	"src/Entite.hpp"
@@ -9,6 +9,7 @@
 	"src/CylindreEau.hpp"
 	"src/Carte/MapLoader.hpp"
 	"src/Carte/Tile.hpp"
+	"src/Carte/TileLoader.hpp"
 
 1437177471 source:/home/alexis/Programmations/cpp/moteur_onea/src/LigneShape.cpp
 
@@ -80,7 +81,7 @@
 1437748164 source:/home/alexis/Programmations/cpp/moteur_onea/src/Carte/TextureLoader.cpp
 	"TextureLoader.hpp"
 
-1437772186 /home/alexis/Programmations/cpp/moteur_onea/src/Carte/TextureLoader.hpp
+1437784723 /home/alexis/Programmations/cpp/moteur_onea/src/Carte/TextureLoader.hpp
 	<SFML/Graphics.hpp>
 	<string>
 	"Loader.hpp"
@@ -112,4 +113,11 @@
 1437772055 /home/alexis/Programmations/cpp/moteur_onea/src/Carte/Loader.hpp
 	<SFML/Graphics.hpp>
 	<string>
+
+1437784872 /home/alexis/Programmations/cpp/moteur_onea/src/Carte/TileLoader.hpp
+	<SFML/Graphics.hpp>
+	<string>
+	"Loader.hpp"
+	"Tile.hpp"
+	"TextureLoader.hpp"
 

@@ -22,16 +22,16 @@ namespace onea
         public:
             TileLoader() = delete;
 
-            TileLoader( string nom, unsigned int id, onea::carte::Tile tile )
-                : Loader(nom, id),
+            TileLoader( unsigned int id, onea::carte::Tile tile )
+                : Loader("", id),
                   tile(tile)
             {
             }
 
-
-            friend bool operator<( const TextureLoader &left, const TextureLoader &right )
+            TileLoader( unsigned int id, Texture *texture, Vector2f positionTexture, Vector2f position = Vector2f(), Vector2f taille = Vector2f() )
+                : Loader("", id),
+                  tile(texture, positionTexture, position, taille)
             {
-                return left.id < right.id;
             }
 
             Tile tile;

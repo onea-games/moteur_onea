@@ -26,12 +26,6 @@ namespace onea
                 texture.loadFromFile( nom );
             }
 
-
-            friend bool operator<( const TextureLoader &left, const TextureLoader &right )
-            {
-                return left.id < right.id;
-            }
-
             Texture texture;
         };
 
