@@ -18,7 +18,7 @@ namespace onea
         class Tile : public Entite, public Drawable
         {
         public:
-            Tile(Texture *texture, Vector2f positionTexture, Vector2f position, Vector2f taille);
+            Tile(Texture *texture = 0, Vector2f positionTexture = Vector2f(), Vector2f position = Vector2f(), Vector2f taille = Vector2f());
 
         protected:
             virtual void draw( RenderTarget &target, RenderStates states ) const;

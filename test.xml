@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <carte>
   <texture fichier="cb.bmp" id="0" />
-  <tileset idTexture="0" tailleX="64" tailleY="64" id="0"/>
+  <tileset idTexture="0" tailleX="64" tailleY="64" textureX="0" textureY="0" id="0"/>
 </carte>

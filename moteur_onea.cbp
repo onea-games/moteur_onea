@@ -51,7 +51,10 @@
 		<Unit filename="src/Carte/TextureLoader.hpp" />
 		<Unit filename="src/Carte/Tile.cpp" />
 		<Unit filename="src/Carte/Tile.hpp" />
+		<Unit filename="src/Carte/TileException.hpp" />
 		<Unit filename="src/Carte/TileLoader.hpp" />
+		<Unit filename="src/Carte/TileSet.cpp" />
+		<Unit filename="src/Carte/TileSet.hpp" />
 		<Unit filename="src/CylindreEau.cpp" />
 		<Unit filename="src/CylindreEau.hpp" />
 		<Unit filename="src/Entite.cpp" />
