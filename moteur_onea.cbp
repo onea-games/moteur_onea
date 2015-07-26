@@ -43,20 +43,19 @@
 		</Compiler>
 		<Unit filename="cb.bmp" />
 		<Unit filename="main.cpp" />
+		<Unit filename="src/Carte/Liste.hpp" />
 		<Unit filename="src/Carte/ListeTexture.cpp" />
 		<Unit filename="src/Carte/ListeTexture.hpp" />
 		<Unit filename="src/Carte/Loader.hpp" />
 		<Unit filename="src/Carte/MapLoader.cpp" />
 		<Unit filename="src/Carte/MapLoader.hpp" />
+		<Unit filename="src/Carte/TextureLoader.cpp" />
 		<Unit filename="src/Carte/TextureLoader.hpp" />
 		<Unit filename="src/Carte/Tile.cpp" />
 		<Unit filename="src/Carte/Tile.hpp" />
-		<Unit filename="src/Carte/TileException.hpp" />
 		<Unit filename="src/Carte/TileLoader.hpp" />
 		<Unit filename="src/Carte/TileSet.cpp" />
 		<Unit filename="src/Carte/TileSet.hpp" />
-		<Unit filename="src/CylindreEau.cpp" />
-		<Unit filename="src/CylindreEau.hpp" />
 		<Unit filename="src/Entite.cpp" />
 		<Unit filename="src/Entite.hpp" />
 		<Unit filename="src/LigneShape.hpp" />

@@ -7,6 +7,7 @@
 #include <SFML/Graphics/Texture.hpp>
 
 #include "TextureLoader.hpp"
+#include "Liste.hpp"
 
 namespace onea
 {
@@ -14,18 +15,17 @@ namespace onea
     namespace carte
     {
 
-        class ListeTexture
+        class ListeTexture : public onea::carte::Liste<onea::carte::TextureLoader>
         {
         public:
             ListeTexture();
 
-            void addTexture( string nom, unsigned int id );
+            void add( string nom, unsigned int id );
+            void add( unsigned int id );
 
-            bool delTexture( unsigned int id );
+            bool del( unsigned int id );
 
-            const Texture *getTexture( unsigned int id ) const;
-
-            size_t getTaille() const;
+            const Texture *get( unsigned int id ) const;
 
         protected:
             set< TextureLoader > m_texture;

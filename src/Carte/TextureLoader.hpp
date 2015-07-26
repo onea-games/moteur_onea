@@ -6,25 +6,18 @@
 
 #include "Loader.hpp"
 
-using namespace sf;
-using namespace std;
-
 namespace onea
 {
 
     namespace carte
     {
 
-        class TextureLoader : public Loader
+        class TextureLoader : public onea::carte::Loader
         {
         public:
             TextureLoader() = delete;
 
-            TextureLoader( string nom, unsigned int id )
-                : Loader(nom, id)
-            {
-                texture.loadFromFile( nom );
-            }
+            TextureLoader( string nom, unsigned int id );
 
             Texture texture;
         };

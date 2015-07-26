@@ -9,9 +9,6 @@
 
 #include "ListeTexture.hpp"
 
-using namespace sf;
-using namespace std;
-
 namespace onea
 {
     namespace carte
@@ -20,7 +17,7 @@ namespace onea
         class MapLoader
         {
         public:
-            MapLoader( string nomFichier );
+            MapLoader( std::string nomFichier );
 
             void load();
 
@@ -28,9 +25,11 @@ namespace onea
             bool verifDocument();
 
             void loadTexture();
+            void loadTileSet();
 
             TiXmlDocument m_document;
-            ListeTexture m_textures;
+
+            onea::carte::ListeTexture m_textures;
 
             bool m_lecture;
         };

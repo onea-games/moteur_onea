@@ -1,18 +1,26 @@
 #include "ListeTexture.hpp"
 
 onea::carte::ListeTexture::ListeTexture()
-    : m_texture()
+    : onea::carte::Liste<onea::carte::TextureLoader>::Liste<onea::carte::TextureLoader>(),
+      m_texture()
 {
 }
 
-void onea::carte::ListeTexture::addTexture( string nom, unsigned int id )
+void onea::carte::ListeTexture::add( string nom, unsigned int id )
 {
     TextureLoader texture( nom, id );
 
     m_texture.insert( texture );
 }
 
-bool onea::carte::ListeTexture::delTexture( unsigned int id )
+void onea::carte::ListeTexture::add( unsigned int id )
+{
+    onea::carte::TextureLoader texture("", id);
+
+    m_texture.insert( texture );
+}
+
+bool onea::carte::ListeTexture::del( unsigned int id )
 {
 
     for( set<TextureLoader>::const_iterator p = m_texture.begin();
@@ -29,7 +37,7 @@ bool onea::carte::ListeTexture::delTexture( unsigned int id )
     return false;
 }
 
-const Texture *onea::carte::ListeTexture::getTexture(unsigned int id) const
+const Texture *onea::carte::ListeTexture::get(unsigned int id) const
 {
 
     for( set<TextureLoader>::const_iterator p = m_texture.begin();
@@ -43,9 +51,4 @@ const Texture *onea::carte::ListeTexture::getTexture(unsigned int id) const
     }
 
     return 0;
-}
-
-size_t onea::carte::ListeTexture::getTaille() const
-{
-    return m_texture.size();
 }

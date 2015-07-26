@@ -19,15 +19,15 @@ int main()
     // Create the main window
     sf::RenderWindow app(sf::VideoMode(800, 600), "SFML window");
 
-    onea::carte::MapLoader map( "test.xml" );
-
-    map.load();
-
     sf::Texture texture;
+
+    onea::Entite ent(Vector2f(0, 0), Vector2f(100, 100));
 
     texture.loadFromFile("cb.bmp");
 
-    onea::carte::Tile tile( &texture, (sf::Vector2f)texture.getSize(), sf::Vector2f(0, 0), (sf::Vector2f)texture.getSize() );
+    onea::Lumiere lum(Vector2f(100, 100), 125, 100, 50, sf::Color::Yellow);
+
+    vector< onea::LigneShape<float> > vec( ent.getLigneShape() );
 
 	// Start the game loop
     while (app.isOpen())
@@ -44,14 +44,21 @@ int main()
                 if( event.key.code == sf::Keyboard::Return )
                     app.close();
 
+            } else if( event.type == sf::Event::MouseMoved ){
+                lum.setPosition(Vector2f(event.mouseMove.x, event.mouseMove.y));
             }
 
         }
 
+        lum.Generate(vec);
+
         // Clear screen
         app.clear();
 
-        app.draw(tile);
+        app.draw(lum, sf::BlendAdd);
+
+        for( size_t i = 0; i < vec.size(); ++i )
+            app.draw(vec[i]);
 
         // Update the window
         app.display();
