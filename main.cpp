@@ -4,9 +4,9 @@
 
 #include "src/Entite.hpp"
 #include "src/LigneShape.hpp"
-#include "src/Lumiere.hpp"
-#include "src/LumiereDirectionelle.hpp"
-#include "src/CylindreEau.hpp"
+#include "src/Physique/Lumiere.hpp"
+#include "src/Physique/LumiereDirectionelle.hpp"
+#include "src/Physique/CylindreEau.hpp"
 #include "src/Carte/MapLoader.hpp"
 #include "src/Carte/Tile.hpp"
 

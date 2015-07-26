@@ -13,8 +13,8 @@
 
 #include <iostream>
 
-#include "Triangle.hpp"
-#include "LigneShape.hpp"
+#include "../Triangle.hpp"
+#include "../LigneShape.hpp"
 
 #define _USE_MATH_DEFINES
 #include <cmath>
