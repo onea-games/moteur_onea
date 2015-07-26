@@ -21,7 +21,6 @@ namespace onea
 
             TileSetLoader( string nom, unsigned int id, sf::Texture *texture, sf::Vector2f tailleTile );
 
-        protected:
             onea::carte::TileSet tileset;
         };
 
