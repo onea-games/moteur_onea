@@ -3,6 +3,7 @@
 onea::carte::MapLoader::MapLoader(std::string nomFichier)
     : m_document(nomFichier),
       m_textures(),
+      m_tilesets(),
       m_lecture(false)
 {
     if( !m_document.LoadFile() ){
@@ -68,7 +69,9 @@ void onea::carte::MapLoader::loadTileSet()
             elm->QueryIntAttribute("largeurTile", &largeurTile);
             elm->QueryIntAttribute("hauteurTile", &hauteurTile);
 
+            sf::Texture *texture = m_textures.get(idTexture);
 
+            m_tilesets.add( idTile, texture, sf::Vector2f(largeurTile, hauteurTile) );
 
         }
 

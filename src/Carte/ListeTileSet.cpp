@@ -12,6 +12,8 @@ void onea::carte::ListeTileSet::add(unsigned int id, sf::Texture *texture, sf::V
     m_type.insert( tileset );
 }
 
+void onea::carte::ListeTileSet::add(unsigned int id){}
+
 bool onea::carte::ListeTileSet::del(unsigned int id)
 {
 

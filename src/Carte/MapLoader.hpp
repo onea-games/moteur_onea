@@ -8,6 +8,7 @@
 #include <string>
 
 #include "ListeTexture.hpp"
+#include "ListeTileSet.hpp"
 
 namespace onea
 {
@@ -30,6 +31,7 @@ namespace onea
             TiXmlDocument m_document;
 
             onea::carte::ListeTexture m_textures;
+            onea::carte::ListeTileSet m_tilesets;
 
             bool m_lecture;
         };

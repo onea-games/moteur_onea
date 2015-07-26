@@ -36,14 +36,14 @@ bool onea::carte::ListeTexture::del( unsigned int id )
     return false;
 }
 
-const Texture *onea::carte::ListeTexture::get(unsigned int id) const
+Texture *onea::carte::ListeTexture::get(unsigned int id)
 {
 
-    for( set<TextureLoader>::const_iterator p = m_type.begin();
+    for( set<TextureLoader>::iterator p = m_type.begin();
     p != m_type.end(); ++p ){
 
         if( (*p).id == id ){
-            return &(*p).texture;
+            return (sf::Texture *)&(*p).texture;
         } else if( (*p).id > id )
             return 0;
 

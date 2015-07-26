@@ -1,4 +1,4 @@
-#ifndef LSTE_HPP
+#ifndef LISTE_HPP
 #define LISTE_HPP
 
 #include <set>
@@ -34,6 +34,4 @@ namespace onea
 }
 
 
-
-//#include "Liste.cpp"
-#endif // LSTE_HPP
+#endif // LISTE_HPP

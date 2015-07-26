@@ -25,7 +25,7 @@ namespace onea
 
             bool del( unsigned int id );
 
-            const Texture *get( unsigned int id ) const;
+            Texture *get( unsigned int id );
         };
 
     }
