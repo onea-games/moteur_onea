@@ -63,10 +63,12 @@
 		<Unit filename="src/Entite.cpp" />
 		<Unit filename="src/Entite.hpp" />
 		<Unit filename="src/LigneShape.hpp" />
-		<Unit filename="src/Lumiere.cpp" />
-		<Unit filename="src/Lumiere.hpp" />
-		<Unit filename="src/LumiereDirectionelle.cpp" />
-		<Unit filename="src/LumiereDirectionelle.hpp" />
+		<Unit filename="src/Physique/CylindreEau.cpp" />
+		<Unit filename="src/Physique/CylindreEau.hpp" />
+		<Unit filename="src/Physique/Lumiere.cpp" />
+		<Unit filename="src/Physique/Lumiere.hpp" />
+		<Unit filename="src/Physique/LumiereDirectionelle.cpp" />
+		<Unit filename="src/Physique/LumiereDirectionelle.hpp" />
 		<Unit filename="src/RectangleShape.hpp" />
 		<Unit filename="src/Shape.hpp" />
 		<Unit filename="src/Triangle.cpp" />
