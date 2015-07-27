@@ -9,7 +9,7 @@
 #include "src/Physique/CylindreEau.hpp"
 #include "src/Carte/MapLoader.hpp"
 #include "src/Carte/Tile.hpp"
-
+#include "src/Carte/Layer.hpp"
 #include "src/Carte/TileLoader.hpp"
 
 #define VITESSE 5
@@ -20,14 +20,13 @@ int main()
     sf::RenderWindow app(sf::VideoMode(800, 600), "SFML window");
 
     sf::Texture texture;
-
-    onea::Entite ent(Vector2f(0, 0), Vector2f(100, 100));
-
     texture.loadFromFile("cb.bmp");
 
-    onea::Lumiere lum(Vector2f(100, 100), 125, 100, 50, sf::Color::Yellow);
+    onea::carte::Tile tile(&texture, sf::Vector2f(), sf::Vector2f(), sf::Vector2f(64, 64));
 
-    vector< onea::LigneShape<float> > vec( ent.getLigneShape() );
+    onea::carte::Layer layer(sf::Vector2f(), sf::Vector2f(64, 64));
+
+    layer.addTile(0, 0, tile);
 
 	// Start the game loop
     while (app.isOpen())
@@ -44,21 +43,14 @@ int main()
                 if( event.key.code == sf::Keyboard::Return )
                     app.close();
 
-            } else if( event.type == sf::Event::MouseMoved ){
-                lum.setPosition(Vector2f(event.mouseMove.x, event.mouseMove.y));
             }
 
         }
 
-        lum.Generate(vec);
-
         // Clear screen
         app.clear();
 
-        app.draw(lum, sf::BlendAdd);
-
-        for( size_t i = 0; i < vec.size(); ++i )
-            app.draw(vec[i]);
+        app.draw(layer);
 
         // Update the window
         app.display();

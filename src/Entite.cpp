@@ -10,6 +10,16 @@ onea::Entite::Entite(Vector2f position, Vector2f taille, Direction dir, float vi
 {
 }
 
+onea::Entite::Entite(const onea::Entite &entite)
+    : m_bound(entite.m_position, entite.m_taille),
+      m_position(entite.m_position),
+      m_futurePosition(entite.m_futurePosition),
+      m_vitesse(entite.m_vitesse),
+      m_direction(entite.m_direction),
+      m_taille(entite.m_taille)
+{
+}
+
 bool  onea::Entite::collision( Entite &entite ) const
 {
     return false; // A finir car j'ai la flemme ( il est 3h00 du mat' )

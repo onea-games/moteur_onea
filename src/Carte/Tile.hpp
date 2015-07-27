@@ -20,7 +20,9 @@ namespace onea
         public:
             Tile(Texture *texture = 0, Vector2f positionTexture = Vector2f(), Vector2f position = Vector2f(), Vector2f taille = Vector2f());
 
-        protected:
+            Tile( const Tile &tile );
+
+        //protected:
             virtual void draw( RenderTarget &target, RenderStates states ) const;
 
             Texture *m_texture;

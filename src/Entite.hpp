@@ -29,6 +29,8 @@ namespace onea
     public:
         Entite( Vector2f position = Vector2f(), Vector2f taille = Vector2f(), Direction dir = BAS, float vitesse = 0 );
 
+        Entite( const onea::Entite &entire );
+
         bool collision( Entite &entite ) const;
 
         void bouger(float x, float y);
