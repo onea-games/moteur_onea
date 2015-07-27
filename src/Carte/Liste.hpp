@@ -4,6 +4,8 @@
 #include <set>
 #include <cstddef>
 
+#include "Loader.hpp"
+
 namespace onea
 {
     namespace carte
