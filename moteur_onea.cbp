@@ -45,6 +45,8 @@
 		<Unit filename="main.cpp" />
 		<Unit filename="src/Carte/Layer.cpp" />
 		<Unit filename="src/Carte/Layer.hpp" />
+		<Unit filename="src/Carte/LayerLoader.cpp" />
+		<Unit filename="src/Carte/LayerLoader.hpp" />
 		<Unit filename="src/Carte/Liste.hpp" />
 		<Unit filename="src/Carte/ListeLayer.cpp" />
 		<Unit filename="src/Carte/ListeLayer.hpp" />

@@ -20,9 +20,9 @@ onea::Entite::Entite(const onea::Entite &entite)
 {
 }
 
-bool  onea::Entite::collision( Entite &entite ) const
+bool  onea::Entite::collision( Entite &entite )
 {
-    return false; // A finir car j'ai la flemme ( il est 3h00 du mat' )
+    return m_bound.intersect( entite.m_bound );
 }
 
 void onea::Entite::bouger( float x, float y )

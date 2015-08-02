@@ -2,4 +2,8 @@
 <carte>
   <texture fichier="cb.bmp" id="0" />
   <tileset idTexture="0" largeurTile="0" hauteurTile="0" id="0"/>
+
+  <layer>
+  </layer>
+  
 </carte>

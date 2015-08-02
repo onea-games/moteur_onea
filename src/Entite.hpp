@@ -31,7 +31,7 @@ namespace onea
 
         Entite( const onea::Entite &entire );
 
-        bool collision( Entite &entite ) const;
+        bool collision( Entite &entite );
 
         void bouger(float x, float y);
         void bouger(Vector2f &pos);

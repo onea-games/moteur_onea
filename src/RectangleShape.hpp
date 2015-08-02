@@ -35,14 +35,14 @@ namespace onea
             return contains(point.x, point.y);
         }
 
-        bool intersect(RectangleShape<T> &shape) const
+        bool intersect(RectangleShape<T> &shape)
         {
             Vector2<T> position(shape.m_position);
 
-            return  contains(position) ||
-                    contains(position.x + shape.m_taille.x, position.y) ||
-                    contains(position.x + shape.m_taille.x, position.y + shape.m_taille.y) ||
-                    contains(position.x, position.y + shape.m_taille.y);
+            return  this->contains(position) ||
+                    this->contains(position.x + shape.m_taille.x, position.y) ||
+                    this->contains(position.x + shape.m_taille.x, position.y + shape.m_taille.y) ||
+                    this->contains(position.x, position.y + shape.m_taille.y);
         }
 
         bool operator==( const RectangleShape &shape ) const
