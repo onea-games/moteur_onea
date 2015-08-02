@@ -36,8 +36,6 @@ void onea::carte::Layer::draw( sf::RenderTarget &target, sf::RenderStates states
 {
     std::vector<onea::carte::tilePosition>::const_iterator i = m_tiles.begin();
 
-    std::cout << m_tiles[0].positionAbs.y << endl;
-
     for(; i != m_tiles.end(); ++i)
         target.draw((*i).tile, states);
 }

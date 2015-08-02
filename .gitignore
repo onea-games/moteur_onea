@@ -33,3 +33,10 @@ bin/*
 *.depend
 *.layout
 *.save
+
+# QTCreator FILE
+*user
+
+# OTHER
+*#
+*~
