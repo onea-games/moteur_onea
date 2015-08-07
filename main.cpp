@@ -2,15 +2,7 @@
 
 #include <iostream>
 
-#include "src/Entite.hpp"
-#include "src/LigneShape.hpp"
-#include "src/Physique/Lumiere.hpp"
-#include "src/Physique/LumiereDirectionelle.hpp"
 #include "src/Physique/CylindreEau.hpp"
-#include "src/Carte/MapLoader.hpp"
-#include "src/Carte/Tile.hpp"
-#include "src/Carte/Layer.hpp"
-#include "src/Carte/TileLoader.hpp"
 
 #define VITESSE 5
 
@@ -19,14 +11,7 @@ int main()
     // Create the main window
     sf::RenderWindow app(sf::VideoMode(800, 600), "SFML window");
 
-    sf::Texture texture;
-    texture.loadFromFile("cb.bmp");
-
-    onea::carte::Tile tile(&texture, sf::Vector2f(), sf::Vector2f(), sf::Vector2f(64, 64));
-
-    onea::carte::Layer layer(sf::Vector2f(), sf::Vector2f(64, 64));
-
-    layer.addTile(0, 0, tile);
+    onea::physique::CylindreEau cyl(sf::Vector2f(100, 0), 600);
 
 	// Start the game loop
     while (app.isOpen())
@@ -50,7 +35,7 @@ int main()
         // Clear screen
         app.clear();
 
-        app.draw(layer);
+        app.draw(cyl);
 
         // Update the window
         app.display();

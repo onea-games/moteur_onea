@@ -15,7 +15,7 @@ onea::anim::Animation::Animation(sf::Texture *texture, float tempsAnimation)
 void onea::anim::Animation::update()
 {
     if( m_clock.getElapsedTime().asSeconds() >= m_tempsParAnim ){
-        if( ++m_count > m_animRect.size() )
+        if( ++m_count >= m_animRect.size() )
             m_count = 0;
 
         m_sprite.setTextureRect( m_animRect[m_count] );
