@@ -1,7 +1,7 @@
 #ifndef LAYERLOADER_HPP
 #define LAYERLOADER_HPP
 
-#include "Loader.hpp"
+#include "Loader.cpp"
 #include "Layer.hpp"
 
 namespace onea

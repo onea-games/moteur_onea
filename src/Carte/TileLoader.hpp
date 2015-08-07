@@ -4,7 +4,7 @@
 #include <SFML/Graphics.hpp>
 #include <string>
 
-#include "Loader.hpp"
+#include "Loader.cpp"
 #include "Tile.hpp"
 #include "TextureLoader.hpp"
 

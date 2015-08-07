@@ -47,7 +47,7 @@ namespace onea
       sf::Sprite m_sprite;
 
       std::vector<sf::IntRect> m_animRect;
-      int m_count;
+      unsigned int m_count;
     };
   }
 }

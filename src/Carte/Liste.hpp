@@ -4,7 +4,7 @@
 #include <set>
 #include <cstddef>
 
-#include "Loader.hpp"
+#include "Loader.cpp"
 
 namespace onea
 {

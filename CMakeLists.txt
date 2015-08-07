@@ -1,6 +1,8 @@
 project(moteur_onea)
 cmake_minimum_required(VERSION 2.8)
 
+add_definitions(-Wall -g)
+
 include(CheckCXXCompilerFlag)
 CHECK_CXX_COMPILER_FLAG("-std=c++11" COMPILER_SUPPORTS_CXX11)
 CHECK_CXX_COMPILER_FLAG("-std=c++0x" COMPILER_SUPPORTS_CXX0X)
@@ -20,6 +22,7 @@ aux_source_directory(src SRC_LIST)
 aux_source_directory(src/Physique SRC_LIST)
 aux_source_directory(src/Carte SRC_LIST)
 aux_source_directory(src/Animation SRC_LIST)
+aux_source_directory(src/Evenement SRC_LIST)
 
 add_executable(${PROJECT_NAME} ${SRC_LIST})
 

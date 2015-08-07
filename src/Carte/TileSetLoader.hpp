@@ -6,7 +6,7 @@
 
 #include <string>
 
-#include "Loader.hpp"
+#include "Loader.cpp"
 #include "TileSet.hpp"
 
 namespace onea
