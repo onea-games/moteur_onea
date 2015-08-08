@@ -1,9 +1,10 @@
 #include <SFML/Graphics.hpp>
 
 #include <iostream>
+#include <SFML/Graphics/Texture.hpp>
 
-#include "src/Physique/CylindreEau.hpp"
 #include "src/Evenement/Evenement.hpp"
+#include "src/Carte/Loader.hpp"
 
 #define VITESSE 5
 
@@ -19,7 +20,7 @@ int main()
     {
         in.updateEvenements();
 
-        if( in.touche(sf::Keyboard::C) )
+        if( in.touche(sf::Keyboard::Space) || in.terminer() )
             app.close();
 
         // Clear screen

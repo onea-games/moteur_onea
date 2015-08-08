@@ -50,6 +50,11 @@ namespace onea
             return m_stack[i-m_size];
         }
 
+        int size() const
+        {
+            return m_size;
+        }
+
     protected:
         unsigned int    m_size,
                         m_sizeMax;
