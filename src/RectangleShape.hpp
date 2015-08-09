@@ -45,6 +45,21 @@ namespace onea
                     this->contains(position.x, position.y + shape.m_taille.y);
         }
 
+        void move(float x, float y)
+        {
+            this->m_shape.clear();
+
+            this->m_position = Vector2f(x, y);
+
+            if( this->m_shape.size() == 4 ){
+                this->m_shape.push_back( LigneShape<T>( Vector2<T>( this->m_position.x, this->m_position.y ), Vector2<T>( this->m_position.x + m_taille.x, this->m_position.y ) ) );
+                this->m_shape.push_back( LigneShape<T>( Vector2<T>( this->m_position.x + m_taille.x, this->m_position.y ), Vector2<T>( this->m_position + m_taille ) ) );
+                this->m_shape.push_back( LigneShape<T>( Vector2<T>(this->m_position + m_taille), Vector2<T>( this->m_position.x, this->m_position.y + m_taille.y ) ) );
+                this->m_shape.push_back( LigneShape<T>( Vector2<T>(this->m_position.x, this->m_position.y + m_taille.y), Vector2f( this->m_position ) ) );
+
+            }
+        }
+
         bool operator==( const RectangleShape &shape ) const
         {
             if( this->m_position == shape->m_position && m_taille == shape.m_taille )

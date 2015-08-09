@@ -1,5 +1,7 @@
 #include "Entite.hpp"
 
+#include <iostream>
+
 onea::Entite::Entite(Vector2f position, Vector2f taille, Direction dir, float vitesse)
     : m_bound(position, taille),
       m_position(position),
@@ -29,11 +31,15 @@ void onea::Entite::bouger( float x, float y )
 {
     m_position.x = x;
     m_position.y = y;
+
+    std::cout << m_bound.contains(5, 5) << std::endl;
 }
 
 void onea::Entite::bouger(Vector2f &pos)
 {
     m_position = pos;
+
+    m_bound.move(pos.x, pos.y);
 }
 
 const Vector2f &onea::Entite::position() const

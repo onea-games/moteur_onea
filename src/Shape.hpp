@@ -41,6 +41,12 @@ namespace onea
             return m_position;
         }
 
+        void move(float x, float y)
+        {
+            m_position.x = x;
+            m_position.y = y;
+        }
+
         bool operator==( const Shape<T> &right ) const
         {
             return right.m_position == m_position;

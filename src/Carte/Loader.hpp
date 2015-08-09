@@ -24,7 +24,7 @@ namespace onea
 
             virtual bool load() = 0;
 
-            virtual std::vector<T>  getVector() const = 0;
+            virtual std::vector<T>  &getVector() = 0;
 
         protected:
             std::string m_nomBalise;
