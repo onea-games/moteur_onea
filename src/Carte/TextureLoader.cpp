@@ -17,13 +17,20 @@ bool onea::carte::TextureLoader::load()
     while( elm ){
 
         if( elm->Value() == m_nomBalise ){
+            textureLoad l;
             sf::Texture texture;
             std::string filePath;
 
             if( elm->QueryStringAttribute("fileName", &filePath) == TIXML_SUCCESS ){
-                texture.loadFromFile(filePath);
 
-                m_cont.push_back(texture);
+                if( texture.loadFromFile(filePath) ){
+                    l.texture = texture;
+
+                    if( elm->QueryIntAttribute("id", &l.id) != TIXML_SUCCESS )
+                        l.id = m_cont.size();
+
+                    m_cont.push_back(l);
+                }
             }
         }
 
@@ -33,7 +40,7 @@ bool onea::carte::TextureLoader::load()
     return true;
 }
 
-std::vector<sf::Texture> &onea::carte::TextureLoader::getVector()
+std::vector<onea::carte::textureLoad> &onea::carte::TextureLoader::getVector()
 {
     return m_cont;
 }

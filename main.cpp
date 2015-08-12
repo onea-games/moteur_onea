@@ -8,6 +8,8 @@
 #include "src/Evenement/Evenement.hpp"
 #include "src/Carte/TextureLoader.hpp"
 #include "src/Entite.hpp"
+#include "src/Carte/TileSet.hpp"
+#include "src/Carte/TileSetLoader.hpp"
 
 #define VITESSE 1
 
@@ -18,33 +20,42 @@ int main()
 
     onea::evenement::Input in(&app);
 
-    onea::Entite entite(Vector2f(1, 0), Vector2f(64, 64));
-    onea::Entite entite_(Vector2f(), Vector2f(64, 64));
+    TiXmlDocument doc("data/test.xml");
 
-    app.setFramerateLimit(64);
+    if( !doc.LoadFile() ){
+        std::cerr << "Impossible de lire le fichier" << std::endl;
+        return 1;
+    }
+
+    onea::carte::TextureLoader tex(&doc);
+
+    tex.load();
+
+    std::cout << tex.getVector().size() << std::endl;
+
+    onea::carte::TileSetLoader tileset(&doc, &tex);
+
+    tileset.load();
+
+    std::cout << tileset.getVector().size() << std::endl;
+
+    sf::Sprite sprite( tex.getVector()[1].texture );
+    sprite.setTextureRect(IntRect(Vector2i(0, 0), Vector2i(16, 16)));
 
 	// Start the game loop
     while (app.isOpen())
     {
         in.updateEvenements();
 
-        sf::Vector2f pos(entite.position());
-
-        if( in.touche(sf::Keyboard::Space) || in.terminer() )
+        if( in.terminer() )
             app.close();
-        if( in.touche(sf::Keyboard::Down) )
-            pos.y += VITESSE;
-        if( in.touche(sf::Keyboard::Up) )
-            pos.y -= VITESSE;
-
-        entite.bouger(pos);
-
-        cout << entite.position().x << "  " << entite.position().y << endl;
-
-        cout << entite.collision(entite_) << endl;
+        else if( in.touche((sf::Keyboard::Space)) )
+            app.close();
 
         // Clear screen
         app.clear();
+
+        app.draw( *tileset.getVector()[0].tileset );
 
         // Update the window
         app.display();

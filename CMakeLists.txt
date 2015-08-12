@@ -29,4 +29,4 @@ add_executable(${PROJECT_NAME} ${SRC_LIST})
 include_directories(include)
 link_directories(lib)
 target_link_libraries(${PROJECT_NAME}
-    sfml-graphics sfml-window sfml-system tinyxml)
+    sfml-graphics sfml-window sfml-system tinyxml GL)

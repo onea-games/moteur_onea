@@ -12,14 +12,19 @@ namespace onea
 {
     namespace carte
     {
-        class TextureLoader : public onea::carte::Loader<sf::Texture>
+        typedef struct textureLoad{
+            sf::Texture texture;
+            int id;
+        } texture;
+
+        class TextureLoader : public onea::carte::Loader<textureLoad>
         {
         public:
             TextureLoader(TiXmlDocument *document);
 
             bool load();
 
-            std::vector<sf::Texture> &getVector();
+            std::vector<textureLoad> &getVector();
         };
     }
 }
