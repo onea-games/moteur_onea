@@ -20,7 +20,6 @@ set(PROJECT_VERSION_MINOR 1)
 aux_source_directory(. SRC_LIST)
 aux_source_directory(src SRC_LIST)
 aux_source_directory(src/Physique SRC_LIST)
-aux_source_directory(src/Carte SRC_LIST)
 aux_source_directory(src/Animation SRC_LIST)
 aux_source_directory(src/Evenement SRC_LIST)
 

@@ -20,29 +20,6 @@ int main()
 
     onea::evenement::Input in(&app);
 
-    TiXmlDocument doc("data/test.xml");
-
-    if( !doc.LoadFile() ){
-        std::cerr << "Impossible de lire le fichier" << std::endl;
-        return 1;
-    }
-
-    onea::carte::TextureLoader tex(&doc);
-
-    tex.load();
-
-    std::cout << tex.getVector().size() << std::endl;
-
-    onea::carte::TileSetLoader tileset(&doc, &tex);
-
-    tileset.load();
-
-    std::cout << tileset.getVector().size() << std::endl;
-
-    sf::Sprite sprite( tex.getVector()[1].texture );
-    sprite.setTextureRect(IntRect(Vector2i(0, 0), Vector2i(16, 16)));
-
-	// Start the game loop
     while (app.isOpen())
     {
         in.updateEvenements();
@@ -54,8 +31,6 @@ int main()
 
         // Clear screen
         app.clear();
-
-        app.draw( *tileset.getVector()[0].tileset );
 
         // Update the window
         app.display();
